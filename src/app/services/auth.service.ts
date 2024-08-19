@@ -45,6 +45,7 @@ loggedIn(): boolean {
   else{
     this.token=false
   }
+  console.log(this.token)
   return this.token;
 }
 
