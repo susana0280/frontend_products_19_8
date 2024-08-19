@@ -1,0 +1,20 @@
+.general-styles{
+  
+    background-color: black;
+    color: white;
+   
+}
+
+  
+
+/* Pantallas medianas (entre 601px y 1200px) */
+@media (min-width: 1000px) {
+    .nav {
+       
+        margin-left: 1000%;
+        display: flex;
+        flex-direction: column;
+       
+    }
+}
+

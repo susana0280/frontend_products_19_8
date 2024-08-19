@@ -1,0 +1,20 @@
+<div class="container">
+
+@if(loading){
+    <h5>Loading...</h5>
+}
+
+@if(!loading){
+  
+    <div class="card" style="width: 18rem;">
+        <img src={{product?.image}} class="card-img-top" alt="product" >
+        <div class="card-body" >
+            <h4>{{product?.price | currency: 'EUR'}}</h4>
+          <h5 class="card-title">{{product?.title}}</h5>
+          <p class="card-text">{{product?.description}}</p>
+          <button class="btn btn-primary" type="submit" (click)="update()" >Select Product</button>
+        </div>
+      </div>
+    
+}
+</div>

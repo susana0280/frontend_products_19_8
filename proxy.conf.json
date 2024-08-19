@@ -1,0 +1,7 @@
+{
+    "/api": {
+        "target": "https://backendproducts508-production.up.railway.app",
+        "secure": false,
+        "changeOrigin": true
+    }
+}

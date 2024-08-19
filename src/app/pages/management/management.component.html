@@ -1,0 +1,82 @@
+
+<div class="container">
+<h1> Product Management</h1>
+
+<form [formGroup]="managementForm" class="row g-3 needs-validation" novalidate (submit)="enviar($event)">
+
+<div class="mb-3">
+    <label for="inputTitle" class="form-label">Title</label>
+    <input type="text" class="form-control" id="inputTitle"  formControlName="title">
+  </div>
+
+  <div class="mb-3">
+    <label for="inputPrice" class="form-label">Price</label>
+    <input type="number" class="form-control" id="inputPrice"  formControlName="price">
+  </div>
+
+  
+  <div class="mb-3">
+    <label for="inputDescription" class="form-label">Description</label>
+    <input type="text" class="form-control" id="inputDescription"  formControlName="description">
+  </div>
+
+ 
+  <div class="mb-3">
+    <label for="inputPrice" class="form-label">Category</label>
+  <select class="form-select" aria-label="Default select example" formControlName="category">
+    <option selected="1"></option>
+    <option value="men's clothing">men's clothing</option>
+    <option value="jewelery">jewelery</option>
+    <option value="electronics">electronics</option>
+    <option value="women's clothing">women's clothing</option>
+  </select>
+</div> 
+
+  <div class="mb-3">
+    <label for="inputImage" class="form-label">Image</label>
+    <input type="text" class="form-control" id="inputImage"  alt="imagen" formControlName="image">
+  </div>
+
+  <div class="mb-3">
+    <h5>RATING</h5>
+       <label for="inputRate" class="form-label">Rate</label>
+       <input type="number" class="form-control" id="inputRate"  formControlName="rate">
+
+       <label for="inputCount" class="form-label">Count</label>
+       <input type="number" class="form-control" id="inputCount"  formControlName="count">
+ 
+ 
+    </div>
+ 
+   
+</form>
+
+</div>
+
+<hr>
+
+<div class="alignButton">
+
+<div class="col-12">
+    <button class="btn btn-primary" type="submit" (click)="postProduct()">New product</button>
+</div>
+
+<div class="col-12">
+  <button class="btn btn-primary" type="submit" (click)="home()">Home</button>
+</div>
+
+@if(updateProd){
+<div class="col-12">
+    <button class="btn btn-primary" type="submit" (click)="updateProduct()">Update product</button>
+</div>
+
+<div class="col-12">
+    <button class="btn btn-primary" type="submit" (click)="deleteProduct()">Delete product</button>
+</div>
+
+<div class="col-12">
+  <button class="btn btn-primary" type="submit" (click)="clear()">Clear</button>
+</div>
+
+}
+</div>

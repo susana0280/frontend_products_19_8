@@ -1,0 +1,11 @@
+.container{
+    padding-bottom: 350px;
+}
+
+button{
+    background-color: grey;
+    margin: auto;
+}
+button:hover{
+    background-color: rgb(47, 50, 50);
+}

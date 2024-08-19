@@ -1,0 +1,20 @@
+.container{
+    display: grid;
+    justify-items: center;
+    background-color: black;
+    color: white;
+      
+    }
+
+img{
+    
+    width: 85%;
+    height: 85%;
+    transition: opacity 2s ease-in-out 0.3s, width 3s linear;
+    }
+   img:hover{
+    opacity: 0.5; /* Ajusta este valor como prefieras */
+    width: 100%; /* O cualquier tamaño que quieras al hacer hover */
+    }
+
+     

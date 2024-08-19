@@ -1,0 +1,29 @@
+.container{
+    width: 50%;
+
+}
+
+
+.alignButton{
+    
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    
+       
+}
+
+
+button{
+    
+    width: 60%;
+    height: 85%;
+    background-color: grey;
+    margin-left: 3%;
+    text-align: center;
+}
+
+button:hover{
+    background-color: rgb(47, 50, 50);
+}
+

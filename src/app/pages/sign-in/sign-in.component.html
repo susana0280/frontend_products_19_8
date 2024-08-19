@@ -1,0 +1,30 @@
+
+<div class="container">
+  <h1>LOGIN</h1>
+<form [formGroup]="authForm"  novalidate (submit)="enviar($event)">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" [ngClass]="{'is-invalid' : hasError('email','required') || hasError('email','email')}"   class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" formControlName="email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      @if(hasError('email','email')){
+      <div class="text-danger">Email inválido</div>
+      }
+      @if(hasError('email','required')){
+        <div class="text-danger">Email requerido</div>
+        }
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" [ngClass]="{'is-invalid' : hasError('email','required') || hasError('password','minlength')}"        class="form-control" id="password" placeholder="Password" formControlName="password">
+      @if(hasError('password','required')){
+      <div class="text-danger">Password requerido</div>
+      }
+      @if(hasError('password','minlength')){
+        <div class="text-danger">Password incorrecto,requiere mínimo tres caracteres</div>
+        }
+    </div>
+    
+    <button type="submit" class="btn btn-primary" (click)="signIn()">Enviar</button>
+  </form>
+  </div>
+

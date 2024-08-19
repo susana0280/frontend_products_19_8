@@ -1,0 +1,21 @@
+.container{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+ 
+  }
+
+ .card-img-top{
+  width: 50%;
+  height: 40%;
+  margin: auto;
+ }
+
+
+button{
+    background-color: grey;
+}
+
+button:hover{
+    background-color: rgb(47, 50, 50);
+}
