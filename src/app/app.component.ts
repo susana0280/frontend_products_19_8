@@ -19,7 +19,7 @@ import { Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent  {
 
       existToken:boolean=false
       
@@ -27,10 +27,13 @@ menuOption:string=""
 _auth=inject(AuthService)
 _router=inject(Router)
 
- 
+
+
+
 
     
 onOption(menuOption:string){
+
   this.menuOption=menuOption
  
 }

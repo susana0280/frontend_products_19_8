@@ -27,8 +27,8 @@
             <li class="nav-item">
             <a class="nav-link"  routerLink="contact" [ngClass]="{'active': menuOption=='conctact'}"  (click)="onOption('contact')" >Contact</a>
             </li>
-            @if(_auth.loggedIn()==false){
-              <div class="collapse navbar-collapse " id="navbarNav"  >
+            @if(_auth.loggedIn()===false){
+              
                 <li class="nav-item " >
                 <a class="nav-link nav"  routerLink="signIn" [ngClass]="{'active': menuOption=='signIn'}"  (click)="onOption('contact')">SignIn</a>
                 </li>
@@ -36,11 +36,11 @@
                 <li class="nav-item " >
                 <a class="nav-link nav"  routerLink="signUp" [ngClass]="{'active': menuOption=='signUp'}"  (click)="onOption('signUp')" >SignUp</a>
                 </li>
-              </div>
+            
              
               }
               
-               @else{
+               @if(this._auth.loggedIn()===true){
              
                 <li class="nav-item " >
                   <a class="nav-link nav"  style="cursor:pointer" [ngClass]="{'active': menuOption=='LogOut'}"  (click)="onOption('logOut')" (click)="_auth.logout()">LogOut</a>

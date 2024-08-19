@@ -51,6 +51,7 @@ export class SignUpComponent {
     this._auth.signUp(this.user).subscribe((data:any)=>{
      
       localStorage.setItem('token',data)
+      console.log(typeof localStorage)
        this._router.navigate(['/management'])
 
     })

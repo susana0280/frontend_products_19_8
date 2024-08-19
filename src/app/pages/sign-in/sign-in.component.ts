@@ -23,7 +23,7 @@ export class SignInComponent {
   _router=inject(Router)
   _auth=inject(AuthService)
 
-
+ 
   authForm!:FormGroup
   
   constructor(private formBuilder:FormBuilder){
@@ -51,9 +51,9 @@ export class SignInComponent {
       email:this.authForm.value.email,
       password:this.authForm.value.password
     }
-    
+    console.log(typeof localStorage)
     this._auth.signIn(this.user).subscribe({
-      
+    
       next: (data:any )=> {
         localStorage.setItem('token',data.token)
         this._router.navigate(['/management'])

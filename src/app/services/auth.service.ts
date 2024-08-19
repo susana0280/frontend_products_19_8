@@ -19,6 +19,7 @@ export class AuthService {
                   
   private _router=inject(Router)
   private _productService=inject(ProductServService)
+ 
 
   token:boolean=false
   updateProd?:IProducts;
@@ -38,14 +39,22 @@ signIn(user:IUser):Observable<IUser>{
 
 loggedIn(): boolean {
   // Verificar si `localStorage` está disponible
-  if (typeof localStorage !== 'undefined' && localStorage.getItem('token')) {
-    this.token = true;
-  
+  if (typeof localStorage==="undefined") {
+   
+   this.token=true
+ 
   }
-  else{
+  else if(localStorage.getItem('token')){
+   
+    this.token = true
+   
+  }
+  else if(!localStorage.getItem('token')){
+
     this.token=false
+   
   }
-  console.log(this.token)
+  
   return this.token;
 }
 
