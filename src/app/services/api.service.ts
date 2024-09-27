@@ -9,8 +9,9 @@ import { IProducts } from '../models/product.model';
 export class ApiService {
 
   private _http=inject(HttpClient)
-  private url_base:string="https://backendproducts508-production.up.railway.app/productos"
-
+  
+   private url_base:string="http://localhost:3000/productos"
+ 
  
   constructor() { }
 

@@ -107,7 +107,7 @@ export class AuthService {
   private _http = inject(HttpClient);
   private _router = inject(Router);
   private _productService = inject(ProductServService);
-  private url_base = "https://backendproducts508-production.up.railway.app/users";
+  private url_base = "http://localhost:3000/users";
 
   token: boolean = false;
   updateProd?: IProducts;
